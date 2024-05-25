@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task9.5</title>
+    <style>
+        ul.list5 {
+            list-style: none;
+            padding: 0;
+        }
+        ul.list5 li {
+            position: relative;
+            padding-left: 1.5em;
+        }
+        ul.list5 li::before {
+            content: "▷";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <ul style="list-style-type: square;">
+        <li>Красный</li>
+        <li>Желтый</li>
+        <li>Зеленый</li>
+        <li>Синий</li>
+    </ul>
+    <ul style="list-style-type: circle;">
+        <li>Красный</li>
+        <li>Желтый</li>
+        <li>Зеленый</li>
+        <li>Синий</li>
+    </ul>
+    <ul style="list-style-type: disc;">
+        <li>Красный</li>
+        <li>Желтый</li>
+        <li>Зеленый</li>
+        <li>Синий</li>
+    </ul>
+    <ul style="list-style-type: none;">
+        <li>Красный</li>
+        <li>Желтый</li>
+        <li>Зеленый</li>
+        <li>Синий</li>
+    </ul>
+    <ul class="list5">
+        <li>Красный</li>
+        <li>Желтый</li>
+        <li>Зеленый</li>
+        <li>Синий</li>
+    </ul>
+    <ul style="list-style-type: decimal;">
+        <li>Иванов</li>
+        <li>Петров</li>
+        <li>Сидоров</li>
+        <li>Николаев</li>
+    </ul>
+    <ul style="list-style-type: lower-greek;">
+        <li>Иванов</li>
+        <li>Петров</li>
+        <li>Сидоров</li>
+        <li>Николаев</li>
+    </ul>
+    <ul style="list-style-type: upper-alpha;">
+        <li>Иванов</li>
+        <li>Петров</li>
+        <li>Сидоров</li>
+        <li>Николаев</li>
+    </ul>
+</body>
+</html>

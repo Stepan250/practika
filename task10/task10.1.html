@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task10.1</title>
+    <style>
+        .link1 {
+            text-decoration: none;
+            font-family: arial;
+            font-size: 13px;
+        }
+        .link1:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        div.aaa li {
+            width: 190px;
+            height: 20px;
+            border-width: 1px;
+            border-style: solid;
+            margin: 0px 5px;
+            padding: 5px;
+            font-family: arial;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .link2 {
+            text-decoration: none;
+        }
+        .link2:hover {
+            font-weight: bold;
+        }
+        .bbb li {
+            background-color: #484848;
+            width: 190px;
+            height: 20px;
+            border: 1px solid black;
+            margin: 0px 5px;
+            padding: 5px;
+            font-family: arial;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .bbb li:hover {
+            background-color: white;
+            .link3 {
+                color: black;
+            }
+        }
+        .link3 {
+            text-decoration: none;
+            color: white;
+        }
+        .ccc li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0081E7;
+            width: 190px;
+            height: 20px;
+            border: 1px solid #0081E7;
+            margin: 0px 5px;
+            padding: 5px;
+            font-family: arial;
+            font-size: 13px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .link4 {
+            color: white;
+            text-decoration: none;
+        }
+        .ccc li:hover {
+            background-color: white;
+            .link4 {
+                color: blue;
+                font-weight: bold;
+            }
+        }
+        .ccc li:hover::after {
+            background-color: white;
+            content: '';
+            display: block;
+            background-image: url('image/blue.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 30px;
+            height: 20px;
+            position: absolute;
+            right: 0px;
+        }
+        .link5 {
+            color: blue;
+            text-decoration: none;
+        }
+        .ddd li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 30px;
+            border: 1px solid #1A31A2;
+            margin: 5px;
+            padding: 0px;
+            font-family: arial;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .ddd ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .link5:hover {
+            color: red;
+        }
+        .eee li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 30px;
+            border: 1px solid #1A31A2;
+            margin: 5px;
+            padding: 0px;
+            font-family: arial;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .eee ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .eee li:hover {
+            background: #484848;
+            border: 1px solid black;
+            .link6 {
+                color: #fff;
+            }
+        }
+        .link6 {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="link1" href="https://example.com">Главная</a></li>
+        <li><a class="link1" href="https://example.com">Новости</a></li>
+        <li><a class="link1" href="https://example.com">Контакты</a></li>
+        <li><a class="link1" href="https://example.com">О Компании</a></li>
+        <li><a class="link1" href="https://example.com">Как добраться</a></li>
+    </ul>
+    <div class="aaa">
+        <ul style="list-style: none">
+            <li><a class="link2" href="https://example.com">Главная</a></li>
+            <li><a class="link2" href="https://example.com">Новости</a></li>
+            <li><a class="link2" href="https://example.com">Контакты</a></li>
+            <li><a class="link2" href="https://example.com">О Компании</a></li>
+            <li><a class="link2" href="https://example.com">Как добраться</a></li>
+        </ul>
+    </div>
+    <div class="bbb">
+        <ul style="list-style: none">
+            <li><a class="link3" href="https://example.com">Главная</a></li>
+            <li><a class="link3" href="https://example.com">Новости</a></li>
+            <li><a class="link3" href="https://example.com">Контакты</a></li>
+            <li><a class="link3" href="https://example.com">О Компании</a></li>
+            <li><a class="link3" href="https://example.com">Как добраться</a></li>
+        </ul>
+    </div>
+    <div class="ccc">
+        <ul style="list-style: none">
+            <li><a class="link4" href="https://example.com">Главная</a></li>
+            <li><a class="link4" href="https://example.com">Новости</a></li>
+            <li><a class="link4" href="https://example.com">Контакты</a></li>
+            <li><a class="link4" href="https://example.com">О Компании</a></li>
+            <li><a class="link4" href="https://example.com">Как добраться</a></li>
+        </ul>
+    </div>
+    <div class="ddd">
+        <ul style="list-style: none">
+            <li><a class="link5" href="https://example.com">Главная</a></li>
+            <li><a class="link5" href="https://example.com">Новости</a></li>
+            <li><a class="link5" href="https://example.com">Контакты</a></li>
+            <li><a class="link5" href="https://example.com">О Компании</a></li>
+            <li><a class="link5" href="https://example.com">Как добраться</a></li>
+        </ul>
+    </div>
+    <div class="eee">
+        <ul style="list-style: none">
+            <li><a class="link6" href="https://example.com">Главная</a></li>
+            <li><a class="link6" href="https://example.com">Новости</a></li>
+            <li><a class="link6" href="https://example.com">Контакты</a></li>
+            <li><a class="link6" href="https://example.com">О Компании</a></li>
+            <li><a class="link6" href="https://example.com">Как добраться</a></li>
+        </ul>
+    </div>
+</body>
+</html>
