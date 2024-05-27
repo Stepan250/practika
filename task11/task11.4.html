@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task11.4</title>
+    <style>
+        .aaa {
+            border: 1px solid #484848;
+            font-size: 20px;
+            font-family: arial;
+        }
+        .aaa ul {
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+            background-color: #484848;
+            list-style: none;
+        }
+        .aaa li {
+            padding: 5px;
+            line-height: 30px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin: 5px;
+        }
+        .aaa a {
+            color: white;
+            text-decoration: none;
+        }
+        li:hover {
+            background-color: white;
+            .link1 {
+                color: #484848;
+            }
+        }
+        footer {
+            margin: 30px;
+            display: block;
+            text-align: center;
+        }
+        .aaa li:active {
+            background-color: orange;
+        }
+        .aaa li:focus {
+            background-color: orange;
+        }
+    </style>
+    <script>
+        function handleLinkClick(event) {
+            event.preventDefault();
+
+            const listItems = document.querySelectorAll('.aaa li');
+            listItems.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            const clickedListItem = event.target.closest('li');
+            clickedListItem.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="aaa">
+        <ul>
+            <li class="link1"><a href="#" onclick="handleLinkClick(event)">Главная</a></li>
+            <li><a href="https://" class="link1">Новости</a></li>
+            <li><a href="https://" class="link1">Контакты</a></li>
+            <li><a href="https://" class="link1">О компании</a></li>
+            <li><a href="https://" class="link1">Как добраться</a></li>
+        </ul>
+        <h1>Proin tristique lorem</h1>
+        <p>К моменту избрания в <span style="text-decoration: underline; font-weight: bold;">Академию Корнель был известен как сочинитель</span> «галантных» стихов и комедий «Мелита, или Подмётные письма», «Клитандр, или Освобождённая невинность», трагедии «Медея», трагикомедии «Сид», в центре которых — отношения между личностью и абсолютистским государством, что ознаменовало собою начало театра французского классицизма, где симпатии автора были на стороне власти.</p>
+        <p><span style="text-decoration: underline; font-weight: bold;">Эти симпатии стали ещё более явными</span> в трагедиях «Гораций», «Цинна, или Милосердие Августа». К началу 1644 года у Корнеля, начиная с трагедий «Родогуна», «Теодора» и «Гибель Помпея», происходит разочарование в абсолютизме, и эти его трагедии получили в литературоведении название «второй манеры», ибо их содержание — это не судьбы нации, а образ монарха-тирана и кипящие вокруг него страсти придворных интриганов и проходимцев.После избрания его академиком пишет трагедии «Никомед» и «Сурена», свидетельствующие о резком падении его таланта[7].</p>
+        <p>Последние годы жизни Корнель провёл очень уединённо и был в крайне стеснённых обстоятельствах. Только благодаря хлопотам его друга Буало, Корнелю была назначена маленькая пенсия. Корнель умер в Париже в полной нищете, и лишь Великая французская революция <span style="text-decoration: underline; font-weight: bold;">1789 года принесла ему посмертную славу.</span></p>
+    </div>
+    <footer class=".footer">
+        <p>Aenean eu auctor diam, et eusismod nulla licinia ultracies accumsan @site.ru</p>
+    </footer>
+</body>
+</html>
