@@ -2,22 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>task8.1</title>
+    <title>task8.2</title>
     <style>
-        .background {
-            margin-left: 630px;
-            position: absolute;
-            background-size: 400px;
-            top: 0;
-            width: 500px;
-            height: 100vh;
-            background-image: url('image/fon1.jpg');
-            z-index: -1;
-        }
         .text {
-            z-index: 1;
+            display: flex;
+            justify-content: flex-start;
+            width: 500px;
+            font-weight: bold;
             text-align: justify;
-            margin-right: 500px;
+        }
+        @media (min-width: 200px) {
+            body {
+                background-image: url('image/fon.jpg');
+            }
         }
     </style>
 </head>

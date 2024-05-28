@@ -16,8 +16,7 @@
         div.aaa li {
             width: 190px;
             height: 20px;
-            border-width: 1px;
-            border-style: solid;
+            border: 1px solid blue;
             margin: 0px 5px;
             padding: 5px;
             font-family: arial;
@@ -25,10 +24,15 @@
             margin-bottom: 10px;
         }
         .link2 {
+            color: blue;
             text-decoration: none;
         }
-        .link2:hover {
-            font-weight: bold;
+        .aaa li:hover {
+            cursor: pointer;
+            .link2 {
+                font-weight: bold;
+                color: blue;
+            }
         }
         .bbb li {
             background-color: #484848;
@@ -44,6 +48,7 @@
 
         .bbb li:hover {
             background-color: white;
+            cursor: pointer;
             .link3 {
                 color: black;
             }
@@ -73,6 +78,7 @@
         }
         .ccc li:hover {
             background-color: white;
+            cursor: pointer;
             .link4 {
                 color: blue;
                 font-weight: bold;
@@ -112,8 +118,11 @@
             padding: 0;
             margin: 0;
         }
-        .link5:hover {
-            color: red;
+        .ddd li:hover {
+            cursor: pointer;
+            .link5 {
+                color: red;
+            }
         }
         .eee ul {
             display: flex;
@@ -123,6 +132,7 @@
         .eee li:hover {
             background: #484848;
             border: 1px solid black;
+            cursor: pointer;
             .link6 {
                 color: #fff;
             }
@@ -130,9 +140,6 @@
         .link6 {
             color: blue;
             text-decoration: none;
-        }
-        .eee li.active, .eee li:focus {
-            background: #484848;
         }
         .eee li {
             display: flex;
@@ -147,7 +154,7 @@
             font-size: 13px;
             margin-bottom: 10px;
         }
-        .link7 {
+        .fff a {
             text-decoration: none;
             color: #CBCBCB;
         }
@@ -264,7 +271,27 @@
             background-repeat: no-repeat;
             background-position: center top;
         }
-
+        li.link7 {
+            background-color: white;
+            display: flex;
+            background-image: url('image/blue.png');
+            background-repeat: no-repeat;
+            background-size: center;
+            background-position: center right 9px;
+            a {
+                text-decoration: none;
+                color: blue;
+                font-weight: bold;
+            }
+        }
+        li.link8 {
+            background-color: #484848;
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+        }
     </style>
 </head>
 <body>
@@ -296,7 +323,7 @@
     <div class="ccc">
         <ul style="list-style: none">
             <li><a class="link4" href="https://example.com">Главная</a></li>
-            <li><a class="link4" href="https://example.com">Новости</a></li>
+            <li class="link7"><a href="https://example.com">Новости</a></li>
             <li><a class="link4" href="https://example.com">Контакты</a></li>
             <li><a class="link4" href="https://example.com">О Компании</a></li>
             <li><a class="link4" href="https://example.com">Как добраться</a></li>
@@ -314,14 +341,14 @@
     <div class="eee">
         <ul style="list-style: none">
             <li><a class="link6" href="https://example.com">Главная</a></li>
-            <li><a class="link6" href="https://example.com">Новости</a></li>
+            <li class="link8"><a href="https://example.com">Новости</a></li>
             <li><a class="link6" href="https://example.com">Контакты</a></li>
             <li><a class="link6" href="https://example.com">О Компании</a></li>
             <li><a class="link6" href="https://example.com">Как добраться</a></li>
         </ul>
     </div>
     <div class="fff">
-        <ul style="list-style: none">
+        <ul>
             <li><a class="izo1" href="https://example.com">авиабилеты</a></li>
             <li><a class="izo2" href="https://example.com"><br>чартеры</a></li>
             <li><a class="izo3" href="https://example.com"><br>ж/д билеты</a></li>
