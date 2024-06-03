@@ -5,15 +5,40 @@
     <title>main</title>
     <script src="app.js" defer></script>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #282826;
+        }
         #result {
             border: 1px solid #5b5b5b;
             width: 168px;
             height: 20px;
             text-align: center;
+            background-color: white;
+        }
+        #operator {
+            display: flex;
+            justify-content: center;
+            border: 1px solid #444242;
+            background-color: white;
+            width: 25px;
+            height: 25px;
+            font-size: 25px;
+
         }
         input {
             text-align: center;
         }
+        button, .button {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0px 10px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -23,6 +48,7 @@
         id="input1"
         value=""
     />
+    <p id="operator"></p>
     <input
         type="number"
         placeholder="Введите число"
@@ -30,9 +56,11 @@
         value=""
     />
     <p id="result"></p>
-    <button onclick="sumNumbers()" id="plus">+</button>
-    <button onclick="sumNumbers()" id="minus">-</button>
-    <button onclick="sumNumbers()" id="multiplication">*</button>
-    <button onclick="sumNumbers()" id="division">/</button>
+    <div class="button">
+        <button onclick="sumNumbers()" id="plus">+</button>
+        <button onclick="sumNumbers()" id="minus">-</button>
+        <button onclick="sumNumbers()" id="multiplication">x</button>
+        <button onclick="sumNumbers()" id="division">/</button>
+    </div>
 </body>
 </html>
