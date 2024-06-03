@@ -9,58 +9,66 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #282826;
         }
-        #result {
-            border: 1px solid #5b5b5b;
-            width: 168px;
-            height: 20px;
-            text-align: center;
-            background-color: white;
-        }
-        #operator {
+        .container {
+            border: 1px solid black;
             display: flex;
             justify-content: center;
-            border: 1px solid #444242;
-            background-color: white;
-            width: 25px;
+            align-items: center;
+            height: 80px;
+            width: 500px;
+            margin-bottom: 10px;
+        }
+        .numbers {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80px;
+            flex: 1;
+        }
+        .punctuation {
+            display: flex;
+            height: 40px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+        .item {
+            flex-basis: 25%;
             height: 25px;
-            font-size: 25px;
-
+            box-sizing: border-box;
+            border: 1px solid black;
         }
-        input {
-            text-align: center;
-        }
-        button, .button {
-            display: flex;
-            justify-content: center;
-            font-size: 30px;
-            margin: 0px 10px;
-            cursor: pointer;
-        }
-
     </style>
 </head>
 <body>
-    <input
-        type="number"
-        placeholder="Введите число"
-        id="input1"
-        value=""
-    />
-    <p id="operator"></p>
-    <input
-        type="number"
-        placeholder="Введите число"
-        id="input2"
-        value=""
-    />
+<div class="container">
+    <input type="number" placeholder="Введите число" id="input1" value="">
+<!--    <p id="operator"></p>-->
+    <input type="number" placeholder="Введите число" id="input2" value="">
     <p id="result"></p>
-    <div class="button">
-        <button onclick="sumNumbers()" id="plus">+</button>
-        <button onclick="sumNumbers()" id="minus">-</button>
-        <button onclick="sumNumbers()" id="multiplication">x</button>
-        <button onclick="sumNumbers()" id="division">/</button>
+</div>
+<div class="container">
+    <div class="numbers">
+        <button onclick="sumNumbers()" class="item" style="order: 1">1</button>
+        <button onclick="sumNumbers()" class="item" style="order: 2">2</button>
+        <button onclick="sumNumbers()" class="item" style="order: 3">3</button>
+        <button onclick="sumNumbers()" class="item" style="order: 4">4</button>
+        <button onclick="sumNumbers()" class="item" style="order: 5">5</button>
+        <button onclick="sumNumbers()" class="item" style="order: 6">6</button>
+        <button onclick="sumNumbers()" class="item" style="order: 7">7</button>
+        <button onclick="sumNumbers()" class="item" style="order: 8">8</button>
+        <button onclick="sumNumbers()" class="item" style="order: 9">9</button>
+        <button onclick="sumNumbers()" class="item" style="order: 10">0</button>
+        <button onclick="sumNumbers()" class="item" style="order: 11">X</button>
+        <button onclick="sumNumbers()" class="item" style="order: 12">AC</button>
     </div>
+    <div class="punctuation">
+        <button onclick="sumNumbers()" class="item" id="plus">+</button>
+        <button onclick="sumNumbers()" class="item" id="minus">-</button>
+        <button onclick="sumNumbers()" class="item" id="multiplication">x</button>
+        <button onclick="sumNumbers()" class="item" id="division">/</button>
+    </div>
+</div>
 </body>
 </html>
